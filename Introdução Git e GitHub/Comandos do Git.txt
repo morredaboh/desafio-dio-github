@@ -1,0 +1,31 @@
+Comandos úteis com explicações simples
+
+git init //inicia repositório local
+rm -rf .git //exclui repositório local
+git status //status da árvore atual
+git log //mostra todas as atualizações de commits
+git restore +nomeDoArquivo //restaura o arquivo para antes das alterações
+git add . //todas as alterações vão para a área de preparação
+git commit --amend -m"descrição" //altera a descrição de commit já feito
+git reset --soft +hashCommit //os commits posteriores do commit escolhido vão para a área de preparação
+git reset --mixed +hashCommit //os arquivos posteriores do commit escolhido ficam como untracked e precisam ser adicionados à área de preparação
+git reset --hard +hashCommit //os arquivos posteriores do commit escolhido são apagados
+git restore --staged +nomeArquivo //retira o arquivo da área de preparação
+git remote add origin +URL //conecta o repositório local ao repositório remoto
+git push //envia as alterações do repositório local para o remoto
+git push -u origin main //set upstream configura branch main como upstream do repositório local
+git fetch //atualiza alterações
+git fetch +nomeServidor +nomeBranch //atualiza as alterações no branch escolhido
+git diff +nomeBranch +nomeBranchRemoto //mostra as diferenças entre as branches
+git pull //puxa as alterações do repositório remoto para o local (git fetch + git merge)
+git clone +URL --branch +nomeBranch --single-branch //clona apenas o branch escolhido
+git checkout -b +nomeBranch //cria uma nova branch
+git checkout +nomeBranch //muda para o branch escolhido
+git branch //lista as branches que existem
+git branch -v //lista o último commit de cada branch
+git branch -d +nomeBranch //deleta a branch escolhida
+git merge +nomeBranch //mescla a branch escolhida com a branch main
+git stash //arquiva modificações feitas
+git stash list //mostra modificações arquivadas
+git stash pop //traz as alterações e exclui as mais recentes
+git stash apply //salva a modificação para uso posterior
